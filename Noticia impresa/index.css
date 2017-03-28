@@ -1,0 +1,612 @@
+/* GENERAL */
+
+/* todos los aside dentro de un div */
+div aside {
+	display: inline;
+}
+
+/* todos los p dentro de un aside que estñ dentro de un div */
+div aside p {
+	display: inline;
+}
+
+i {
+	margin: 0 0.5256%;
+}
+
+/* FIN GENERAL */
+
+/* CLASES */
+.autor {
+	font-size: 0.9em!important;
+	border-right: solid 2px #C9C9C9;
+	margin-left: 0!important;
+	text-transform: uppercase;
+}
+
+/* pie de noticia o de foto */
+.pie {
+	font-size: 0.8em;
+	min-height: 20px;
+	text-transform: capitalize;
+	padding: 5px;
+}
+
+/* aside del pie con el contenido */
+.pie aside {
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+/* div con un texto centrado */
+.centrado {
+	width: 80%;
+    margin: auto;
+    padding: 3% 0%;
+}
+
+/* a con el enlaca de la noticia */
+.enlace_noticia {
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+}
+
+/* div con las noticias relacionadas */
+.relacionadas_noticia {
+	border-top: solid 1px #C9C9C9;
+	border-bottom: solid 1px #C9C9C9;
+	padding: 5px 0px;
+}
+
+/* aside con cada una de las noticias relacionadas con otra noticia */
+.relacionadas_noticia aside {
+	border-right: solid 2px #C9C9C9;
+}
+
+/* a dentro de un aside dentro de un div con las noticias relacionadas con otra noticia */
+.relacionadas_noticia aside a {
+	text-decoration: none;
+	color: #2e6d9d;
+	padding: 5px;
+}
+
+/* a con la ñltima noticia relacionada con otra noticia */
+.ultimo_relacionado {
+	border-right: none!important;
+}
+
+/* FIN CLASES */
+
+/* HEADER */
+header {
+	height: 80px;
+}
+
+header aside {
+	display: inline;
+}
+
+/* formato general para todos los button del header */
+header button {
+	border: none;
+	padding: 5.5%;
+	display: inline-block;
+	border-radius: 2px;
+}
+
+/* aside que contiene los dos botones del header */
+#botones_header {
+	display: inline;
+	float: right;
+	margin-top: 1.501%;
+	margin-right: 0.751%;
+	width: 250px;
+}
+
+/* boton suscribete del header */
+#boton_suscribete_header {
+	background-color: #2e6d9d;
+	color: #fff;
+}
+
+/* boton inicio sesion del header */
+#boton_inicio_header {
+	background-color: white;
+	color: #49a3db;
+	margin-left: 5px;
+	float: right;
+}
+
+/* aside que contiene la fecha en el header */
+#fecha_header p{
+	float: left;
+    margin-left: 1.5%;
+    margin-top: 1.5%;
+    display: inline;
+}
+
+/* aside que contiene la fecha en la que se ha actualizado la portada */
+#hora_actualizado_header{
+	position: relative;
+    bottom: 25px;
+    right: 127.97px;
+}
+
+/* logo del header */
+#logo_header {
+	height: 60px;
+	width: 350px;
+	margin-top: 0.75%;
+    margin-bottom: 0.75%;
+    margin-left: 14%;
+    display: inline;
+}
+
+/* FIN HEADER */
+
+/* BARRA DE NAVEGACION */
+nav {
+	border-top: solid 1px #C9C9C9;
+	border-bottom: solid 1px #C9C9C9;
+	background: #f0edec;
+	height: 46px;
+}
+
+/* cada aside de la barra de navegaciñn */
+nav aside {
+	display: inline;
+}
+
+/* cada enlace de la barra de navegaciñn */
+nav a {
+	padding: 15px 12px;
+	text-decoration: none;
+	display: inline-block;
+	color: #000;
+	font-family: "Clear Sans",Arial,sans-serif,helvetica;
+	text-transform: uppercase;
+}
+
+/* FIN BARRA NAVEGACION */
+
+/* NOTICIA IMPORTANTE */
+
+/* article con la noticia importante */
+#noticia_importante {
+	min-height: 33.503%;
+	position: relative;
+}
+
+/* a con el enlace de la noticia importante */
+#noticia_importante a {
+	font-size: 3em;
+}
+
+/* div con las noticias relacionadas */
+#relacionadas_noticia_importante {
+	border-top: solid 1px #C9C9C9;
+	border-bottom: solid 1px #C9C9C9;
+	padding: 5px 0px;
+}
+
+/* FIN NOTICIA IMPORTANTE */
+
+/* NOTICIA DESTACADA */
+
+/* div con todo el bloque que engloba la noticia destacada y las que le acompañan */
+#bloque_noticia_destacada {
+	margin-top: 5px;
+}
+
+/* div con toda la noticia destacada */
+#noticia_destacada {
+	width: 45.012%;
+	display: inline-block;
+}
+
+/* imagen de la noticia destacada */
+#noticia_destacada img {
+	display: block;
+	height: 60%;
+	width: 100%;
+}
+
+/* article con el texto de la noticia destacada */
+#texto_noticia_destacada {
+	min-height: 15.48%;
+	font-size: 1.8em;
+}
+
+/* div con la entradilla de la noticia destacada */
+#entradilla_noticia_destacada {
+	width: 90%;
+}
+
+/* aside con el texto de la noticia destacada */
+#texto_entradilla_noticia_destacada {
+	display: block;
+	min-height: 7.74%;
+	padding: 10px;
+}
+
+#relacionadas_noticia_destacada div aside {
+	display: inline;
+}
+
+/* FIN NOTICIA DESTACADA */
+
+/* NOTICIAS ACOMPAÑAN NOTICIA DESTACADA */
+
+/* div con el resto de noticias que acompañan a la noticia destacada */
+#bloque_noticias {
+	float: right;
+	width: 45%;
+	/*height: 105%;*/
+}
+
+/* div con el texto de la noticia normal */
+#texto_noticia_normal {
+	height: 20.063%;
+	position: relative;
+}
+
+/* p con el texto de la noticia normal */
+#texto_noticia_normal a {
+	font-size: 2em;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+}
+
+/* img de la noticia con foto dentro del article que acompaña a la noticia destacada */
+#noticias_acompañan_noticia_destacada article img {
+	width: 100%;
+	height: 48.695%;
+}
+
+/* div que contiene la noticia con foto normal que acompaña a la noticia destacada */
+#noticia_con_foto_normal {
+	margin-top: 5px;
+}
+
+#noticia_con_foto_normal img {
+	width: 100%;
+}
+
+/* div de la noticia con foto normal */
+#texto_noticia_con_foto_normal {
+	position: relative;
+	height: 16.063%;
+}
+
+/* a con el enlace de la noticia con foto normal */
+#noticia_con_foto_normal a {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 17%;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 1.8em;
+}
+
+/* FIN NOTICIAS ACOMPAñAN NOTICIA DESTACADA */
+
+/* NOTICIA CON FOTO PRINCIPAL */
+
+/* article que contiene la noticia con foto principal */
+.noticia_con_foto_principal {
+	width: 37.51%;
+	display: inline-block;
+	float: left;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+/* img con la foto de la noticia con foto principal */
+.foto_noticia_con_foto {
+	width: 100%;
+	height: 38.7%;
+}
+
+/* div con el texto de la noticia con foto principal */
+.texto_noticia_con_foto {
+	height: 15.48%;
+	position: relative;
+}
+
+/* enlace de la noticia con foto principal */
+.texto_noticia_con_foto a {
+	font-size: 1.5em;
+	position: absolute;
+	left: 0;
+	top: 23%;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+}
+
+/* article que contiene la noticia con foto secundaria */
+.noticia_con_foto_secundaria {
+	width: 30.008%;
+	display: inline-block;
+	float: left;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+/* article que contiene la ñltima noticia con foto secundaria */
+.ultima_noticia_con_foto {
+	width: 30.008%;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.ultima_foto_noticia_con_foto {
+	width: 100%;
+	height: 38.7356%;
+}
+
+/* FORMATO NOTICIA */
+
+/* PRIMERA BARRA NAVEGACION */
+
+nav.primera_barra_navegacion_noticia {
+    background-color: white;
+}
+
+img.logo_noticia {
+    position: relative;
+    top: 7px;
+}
+
+.primera_barra_navegacion_noticia button {
+	border: none;
+	display: inline-block;
+	padding-top: 6%;
+	padding-bottom: 6.4%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+
+.primera_barra_navegacion_noticia button.boton_suscribete_noticia {
+	background-color: #2e6d9d;
+	color: white;
+	float: left;
+	width: 50%;
+	padding: 6.2%;
+}
+
+.primera_barra_navegacion_noticia button.boton_sesion_noticia {
+	background-color: white;
+	float: right;
+	width: 50%;
+	padding: 6%;
+}
+
+.bloque_enlaces_primer_nav_noticia {
+	display: inline-block;
+	float: left;
+	width: 80%;
+}
+
+.bloque_botones_primer_nav_noticia {
+	float: right;
+	display: inline_block;
+	width: 20%;
+}
+
+/* FIN PRIMERA BARRA NAVEGACION */
+
+/* SEGUNDA BARRA DE NAVEGACION */
+
+div.contenedor_categoria_noticia {
+	display: inline-block;
+	border-right: solid 2px #c9c9c9;
+	height: 103%;
+	padding: 0% 2%;
+	text-transform: uppercase;
+}
+
+.segunda_barra_navegacion_noticia a {
+    border-right: solid 2px #c9c9c9;
+    position: relative;
+    bottom: 5%;
+}
+
+/* FIN SEGUNDA BARRA NAVEGACION */
+
+/* BLOQUE NOTICIA */
+
+div.bloque_noticia_completa {
+	margin: 0 10%;
+}
+
+/* BLOQUE TITULO NOTICIA */
+
+div.titulo_noticia {
+    height: 100%;
+    /*border: solid 2px #2e6d9d;*/
+}
+
+div.tematica_noticia {
+    text-transform: capitalize;
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "robotoBold",Arial,helvetica;
+    /*border-bottom: solid 2px #2e6d9d;*/
+    /*border-right: solid 2px #2e6d9d;*/
+    color: #666666;
+}
+
+div.titulo_noticia h1 {
+    padding-left: 2%;
+    margin-bottom: 8%;
+    margin-top: 4%;
+    font-size: 2.5em;
+    font-family: "robotoBold",Arial,helvetica;
+}
+
+/* FIN BLOQUE NOTICIA */
+
+/* BLOQUE FIJO NOTICIA */
+
+section.bloque_fijo_noticia {
+		width: 35%;
+		float: left;
+		display: inline;
+}
+
+.bloque_autor_fijo_noticia {
+    text-transform: uppercase;
+    border-top: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    padding: 2% 0%;
+}
+
+div.bloque_autor_fijo_noticia span {
+    padding: 0% 2%;
+    border-right: solid 1px #c9c9c9;
+}
+
+.bloque_botones_fijo_noticia {
+    font-size: 2em;
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.hora_actualizado_fijo_noticia {
+    font-size: 1.25em;
+    width: 100%;
+    display: inline-block;
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.hora_actualizado_fijo_noticia span{
+    float: right;
+}
+
+/* FIN BLOQUE FIJO NOTICIA */
+
+/* BLOQUE TEXTO NOTICIA */
+
+section.bloque_texto_noticia {
+	width: 62%;
+	float: right;
+	display: inline-block;
+}
+
+
+/* BLOQUE IMAGEN NOTICIA */
+.bloque_imagen_noticia {
+    display: inline-block;
+}
+
+.imagen_noticia img {
+    max-width: 661.17px;
+    max-height: 371.97px;
+}
+
+.bloque_pie_foto_noticia {
+	color: #666666;
+	font-size: 1.2em;
+	font-family: "robotoRegular",Arial,sans-serif,helvetica;
+	border-top: solid 1.5px #c9c9c9;
+	border-bottom: solid 1.5px #c9c9c9;
+}
+
+.bloque_pie_foto_noticia span {
+	border-right: solid 1px #c9c9c9;
+	padding: 0% 1%;
+}
+
+span.creditos_pie_foto {
+    font-family: "robotoBold",Arial,helvetica;
+    font-size: 0.8em;
+    border-right: none!important;
+}
+
+/* FIN BLOQUE IMAGEN NOTICIA */
+
+/* BLOQUE TEXTO NOTICIA */
+
+article.entradilla_noticia {
+    color: #666666;
+    font-size: 1.5em;
+    font-family: "robotoRegular",Arial,sans-serif,helvetica;
+}
+
+article.cuerpo_noticia {
+    font-family: "PTregular",Georgia;
+    font-size: 1.25em;
+}
+
+.bloque_seccion_noticia {
+    color: #03a3d8;
+}
+
+/* CSS CON LA NOTICIA IMPRESA */
+#contenedor_logo_impresa {
+    width: 20%;
+    margin: auto;
+    padding-top: 3%;
+}
+
+.titulo_noticia_impresa {
+    font-size: 2.5em;
+    margin:auto;
+    width: 70%;
+    text-align: center;
+}
+
+.entradilla_noticia_impresa {
+    width: 50%;
+    float: left;
+    font-size: 3em;
+}
+
+#contenedor_noticia_impresa span {
+    font-family: sans-serif;
+    font-size: 0.4em!important;
+    text-transform: uppercase;
+}
+
+.foto_noticia_impresa {
+    width: 50%;
+    float: right;
+    position: relative;
+}
+
+#contenedor_noticia_impresa {
+    display: inline-block;
+    position: relative;
+}
+
+.pie_noticia_impresa {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.autor_pie_impresa {
+    border-right: solid 1px #808080;
+    margin-right: 1%;
+}
+
+.cuerpo_noticia_impresa {
+    font-family: sans-serif;
+    font-size: 1.3em;
+}
+
+.seccion_impresa {
+    font-size: 1.2em;
+    color: #03a3d8;
+}

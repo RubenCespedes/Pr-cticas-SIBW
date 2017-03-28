@@ -1,0 +1,401 @@
+/* REMODELACIÓN */
+
+footer {
+    margin: 1% 0%;
+    text-transform: capitalize;
+}
+
+.autor {
+    border-right: solid 1px #C9C9C9;
+    padding-right: 1%;
+}
+
+.noticias_relacionadas {
+    padding: 1% 0%;
+    border-top: solid 1px #C9C9C9;
+    border-bottom: solid 1px #c9c9c9;
+    margin-bottom: 1%;
+}
+
+.noticias_relacionadas span {
+    border-right: solid 1px #C9C9C9;
+    padding-right: 1%;
+}
+
+.ultima_relacionada {
+    border-right: none!important;
+}
+
+.foto_noticia {
+    margin-top: 4%;
+}
+
+.sola {
+    padding: 8% 0%;
+}
+
+.inferior {
+    font-size: 1em!important;
+}
+
+.clear {
+    clear: left;
+    margin-top: 1.5%!important;
+}
+
+/* HEADER */
+
+header {
+    height: 80px;
+    margin-bottom: 0.4%; /* Añadido para que se vea todo el contenido del nav */
+}
+
+.cont_fecha_header {
+    float: left; /* El contenedor flotará a la izq */
+    display: grid; /* Los dos span que contiene (fecha de hoy y hora de actualización) se encuentran uno encima del otro */
+    position: relative; /* Lo moveremos a otra posición relativa */
+    top: 30%; /* Lo centraremos en el eje y */
+    margin-left: 1%;
+}
+
+.cont_logo_header {
+    width: 25%;
+    margin: auto; /* Con esto + el width conseguimos que el logo se centre */
+    position: relative;
+    top: 25%; /* Lo centraremos en el eje y */
+}
+
+.cont_botones_header {
+    float: right;
+    position: relative;
+    bottom: 25%; /* Lo centramos en el eje y */
+    margin-right: 1%;
+    width: 19%; /* Le ponemos el ancho justo para que quepan los dos botones (el de inicio de sesión y el de suscribirse)*/
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+    
+/* Botones inicio sesion y suscribete */
+header button {
+    border: none; /* No tendrán borde */
+    padding: 5.5%;
+    border-radius: 2px; /* El borde será redondo */
+}
+
+#boton_suscribete_header {
+    background-color: #2e6d9d;
+    color: #fff;
+}
+
+#boton_inicio_header {
+    background-color: white;
+    color: #49a3db;
+}
+
+/* FIN HEADER */
+
+/* BARRA DE NAVEGACION */
+
+nav {
+	border-top: solid 1px #C9C9C9;
+	border-bottom: solid 1px #C9C9C9;
+	background: #f0edec;
+	height: 46px;
+    margin-bottom: 1%;
+}
+
+nav li {
+	padding: 15px 10px;
+	display: inline-block;
+	font-family: "Clear Sans",Arial,sans-serif,helvetica;
+	text-transform: uppercase;
+    height: 34%; /* Para que al ponernos encima no pisemos el borde inferior */
+}
+
+nav li:hover {
+    background-color: #E5E3E3;
+}
+
+nav li a:hover {
+    color: #2e6d9d;
+}
+
+.redes_sociales {
+    display: inline;
+    margin-left: 1%;
+}
+
+/* FIN BARRA NAVEGACION */
+
+#cuerpo_noticias {
+    width: 90%;
+    margin: auto;
+}
+
+/* NOTICIA IMPORTANTE (MÁS GRANDE) */
+
+.cont_noticia_importante {
+    width: 86%; /* Sólo ocupará un porcentaje del total que ocupan todas las noticias */
+    margin-bottom: 1%; /* Separación con el siguiente bloque de noticias */
+    margin: auto; /* todo el contenido estará centrado */
+}
+
+.titulo_noticia_importante {
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4% 0%;
+}
+
+/* FIN NOTICIA IMPORTANTE */
+
+/* NOTICIA DESTACADA (BLOQUE MÁS ANCHO, NOTICIA IZQ) */
+
+.cont_noticia_destacada {
+    float: left;
+    width: 50%;
+}
+
+.titulo_noticia_destacada {
+    font-size: 2em;
+}
+
+.entradilla {
+    font-size: 1em;
+    font-family: sans-serif;
+    padding: 3% 0% 3% 3%;
+}
+
+.relacionadas_destacadas {
+    text-indent: 2%;
+}
+
+/* FIN NOTICIA DESTACADA */
+
+/* NOTICIA NORMAL (CON FOTO O SIN FOTO) */
+
+.cont_noticia_normal {
+    width: 49%;
+    margin-left: 1%;
+    float: right;
+}
+
+.titulo_noticia {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* FIN NOTICIA NORMAL */
+
+
+/* BLOQUE NOTICIAS INFERIORES */
+
+.cont_noticia_principal {
+    width: 35%;
+    margin-left: 3%;
+    display: inline-block;
+    float: left;
+    margin-top: 2.25%;
+}
+
+.cont_noticia_secundaria {
+    width: 27%;
+    margin-left: 3%;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+/* FORMATO NOTICIA */
+
+/* PRIMERA BARRA NAVEGACION */
+
+nav.primera_barra_navegacion_noticia {
+    background-color: white;
+}
+
+img.logo_noticia {
+    position: relative;
+    top: 7px;
+}
+
+.primera_barra_navegacion_noticia button {
+	border: none;
+	display: inline-block;
+	padding-top: 6%;
+	padding-bottom: 6.4%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+
+.primera_barra_navegacion_noticia button.boton_suscribete_noticia {
+	background-color: #2e6d9d;
+	color: white;
+	float: left;
+}
+
+.primera_barra_navegacion_noticia button.boton_sesion_noticia {
+	background-color: white;
+	float: right;
+	width: 55%;
+	padding-bottom: 6%;
+}
+
+.bloque_enlaces_primer_nav_noticia {
+	display: inline-block;
+	float: left;
+}
+
+.bloque_botones_primer_nav_noticia {
+	float: right;
+	display: inline_block;
+	width: 19%;
+}
+
+/* FIN PRIMERA BARRA NAVEGACION */
+
+/* SEGUNDA BARRA DE NAVEGACION */
+
+div.contenedor_categoria_noticia {
+	display: inline-block;
+	border-right: solid 2px #c9c9c9;
+	height: 103%;
+	padding: 0% 2%;
+	text-transform: uppercase;
+}
+
+.segunda_barra_navegacion_noticia a {
+    border-right: solid 2px #c9c9c9;
+    position: relative;
+    bottom: 5%;
+}
+
+/* FIN SEGUNDA BARRA NAVEGACION */
+
+/* BLOQUE NOTICIA */
+
+div.bloque_noticia_completa {
+	margin: 0 10%;
+}
+
+/* BLOQUE TITULO NOTICIA */
+
+div.titulo_noticia {
+    height: 100%;
+    /*border: solid 2px #2e6d9d;*/
+}
+
+div.tematica_noticia {
+    text-transform: capitalize;
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "robotoBold",Arial,helvetica;
+    /*border-bottom: solid 2px #2e6d9d;*/
+    /*border-right: solid 2px #2e6d9d;*/
+    color: #666666;
+}
+
+div.titulo_noticia h1 {
+    padding-left: 2%;
+    margin-bottom: 8%;
+    margin-top: 4%;
+    font-size: 2.5em;
+    font-family: "robotoBold",Arial,helvetica;
+}
+
+/* FIN BLOQUE NOTICIA */
+
+/* BLOQUE FIJO NOTICIA */
+
+section.bloque_fijo_noticia {
+		width: 35%;
+		float: left;
+		display: inline;
+}
+
+.bloque_autor_fijo_noticia {
+    text-transform: uppercase;
+    border-top: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    padding: 2% 0%;
+}
+
+div.bloque_autor_fijo_noticia span {
+    padding: 0% 2%;
+    border-right: solid 1px #c9c9c9;
+}
+
+.bloque_botones_fijo_noticia {
+    font-size: 2em;
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.hora_actualizado_fijo_noticia {
+    font-size: 1.25em;
+    padding-left: 23%;
+    border-bottom: solid 1px #c9c9c9;
+}
+
+/* FIN BLOQUE FIJO NOTICIA */
+
+/* BLOQUE TEXTO NOTICIA */
+
+section.bloque_texto_noticia {
+	width: 62%;
+	float: right;
+	display: inline-block;
+}
+
+
+/* BLOQUE IMAGEN NOTICIA */
+.bloque_imagen_noticia {
+    display: inline-block;
+}
+
+.imagen_noticia img {
+    max-width: 661.17px;
+    max-height: 371.97px;
+}
+
+.bloque_pie_foto_noticia {
+	color: #666666;
+	font-size: 1.2em;
+	font-family: "robotoRegular",Arial,sans-serif,helvetica;
+	border-top: solid 1.5px #c9c9c9;
+	border-bottom: solid 1.5px #c9c9c9;
+}
+
+.bloque_pie_foto_noticia span {
+	border-right: solid 1px #c9c9c9;
+	padding: 0% 1%;
+}
+
+span.creditos_pie_foto {
+    font-family: "robotoBold",Arial,helvetica;
+    font-size: 0.8em;
+    border-right: none!important;
+}
+
+/* FIN BLOQUE IMAGEN NOTICIA */
+
+/* BLOQUE TEXTO NOTICIA */
+
+article.entradilla_noticia {
+    color: #666666;
+    font-size: 1.5em;
+    font-family: "robotoRegular",Arial,sans-serif,helvetica;
+}
+
+article.cuerpo_noticia {
+    font-family: "PTregular",Georgia;
+    font-size: 1.25em;
+}
+
+.bloque_seccion_noticia {
+    color: #03a3d8;
+}
