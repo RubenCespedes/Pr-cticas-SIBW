@@ -1,6 +1,11 @@
 /* REMODELACIÓN */
 
-#sidebar {
+#cont_noticia {
+    float: left;
+    width: 83%;
+}
+
+.sidebar {
     float: right;
     width: 15%;
 }
@@ -412,7 +417,8 @@ section.bloque_texto_noticia {
 
 /* BLOQUE IMAGEN NOTICIA */
 .bloque_imagen_noticia {
-    display: inline-block;
+    /*
+    display: inline-block;*/
 }
 
 .imagen_noticia img {
@@ -549,8 +555,8 @@ article.cuerpo_noticia {
     border-radius: 4px;
 }
 #bloque_boton_ver_comentarios {
-    width: 19%;
-    margin:auto;
+    width: 18%;
+    margin: auto;
 }
 
 #boton_ver_comentarios {
