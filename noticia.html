@@ -61,7 +61,8 @@
     </nav>
 		
 	<!-- RESTO DE LA NOTICIA -->
-	<div class="bloque_noticia_completa">
+    <div id="cont_noticia">
+        <div class="bloque_noticia_completa">
 		<section class="bloque_titulo_noticia">
 			<div class="titulo_noticia">
 				<div class="tematica_noticia">
@@ -91,7 +92,7 @@
 		<section class="bloque_texto_noticia">
 			<div class="bloque_imagen_noticia">
 				<div class="imagen_noticia">
-					<img src="./images/imagen_noticia.png" alt="imagen_noticia">
+					<img src="./images/imagen_noticia.png" width="100%" alt="imagen_noticia">
 				</div>
 				<div class="bloque_pie_foto_noticia">
 					<span>Cristiano celebra con Zidane su gol ante la Roma el curso pasado</span>
@@ -127,10 +128,10 @@
 			</div>
 		</section>
 	</div>
-    <div id="bloque_boton_ver_comentarios">
+        <div id="bloque_boton_ver_comentarios">
         <button id="boton_ver_comentarios" onclick="openNav()">ver comentarios</button>
     </div>
-    <div id="bloque_comentarios">
+        <div id="bloque_comentarios">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div id="contenedor_comentarios">
             <div class="comentario">
@@ -165,6 +166,11 @@
                 <textarea id="fname" onkeyup="myFunction()" name="message" rows="10" cols="70" required>Introduzca aquí su comentario...</textarea>               
             </div>         
         </div>
+    </div>
+    </div>
+	
+    <div class="sidebar">
+        <img src="images/publicidad.png" width="100%" alt="PUBLI">
     </div>
 </body>
 

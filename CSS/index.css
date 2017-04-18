@@ -1,5 +1,15 @@
 /* REMODELACIÓN */
 
+#cont_noticia {
+    float: left;
+    width: 83%;
+}
+
+.sidebar {
+    float: right;
+    width: 15%;
+}
+
 footer {
     margin: 1% 0%;
     text-transform: capitalize;
@@ -11,6 +21,7 @@ footer {
 }
 
 .noticias_relacionadas {
+    font-size: 0.95em;
     padding: 1% 0%;
     border-top: solid 1px #C9C9C9;
     border-bottom: solid 1px #c9c9c9;
@@ -39,8 +50,10 @@ footer {
 }
 
 .clear {
+    margin-top: 0%!important;
+    /*
     clear: left;
-    margin-top: 1.5%!important;
+    margin-top: 1.5%!important;*/
 }
 
 /* HEADER */
@@ -131,8 +144,10 @@ nav li a:hover {
 /* FIN BARRA NAVEGACION */
 
 #cuerpo_noticias {
-    width: 90%;
-    margin: auto;
+    float: left;
+    width: 83%; // MODIFICADO PARA AÑADIR EL SIDEBAR CON LA PUBLICIDAD
+    /*width: 90%;
+    margin: auto;*/
 }
 
 /* NOTICIA IMPORTANTE (MÁS GRANDE) */
@@ -181,6 +196,7 @@ nav li a:hover {
     width: 49%;
     margin-left: 1%;
     float: right;
+    margin-bottom: 2%; // AÑADIDO CUANDO EL SIDEBAR
 }
 
 .titulo_noticia {
@@ -194,18 +210,27 @@ nav li a:hover {
 /* BLOQUE NOTICIAS INFERIORES */
 
 .cont_noticia_principal {
+    float: left;
+    width: 35%;
+    margin-top: 1.65%;
+    /*
     width: 35%;
     margin-left: 3%;
     display: inline-block;
     float: left;
-    margin-top: 2.25%;
+    margin-top: 2.25%;*/
 }
 
 .cont_noticia_secundaria {
     width: 27%;
+    display: inline-block;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    /*
+    width: 27%;
     margin-left: 3%;
     display: inline-block;
-    margin-top: 2%;
+    margin-top: 2%;*/
 }
 
 /* INCORPORADO PARA LA NOTICIA */
@@ -392,7 +417,8 @@ section.bloque_texto_noticia {
 
 /* BLOQUE IMAGEN NOTICIA */
 .bloque_imagen_noticia {
-    display: inline-block;
+    /*
+    display: inline-block;*/
 }
 
 .imagen_noticia img {
@@ -529,8 +555,8 @@ article.cuerpo_noticia {
     border-radius: 4px;
 }
 #bloque_boton_ver_comentarios {
-    width: 19%;
-    margin:auto;
+    width: 18%;
+    margin: auto;
 }
 
 #boton_ver_comentarios {
