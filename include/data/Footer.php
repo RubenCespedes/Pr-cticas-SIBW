@@ -1,10 +1,9 @@
 <?php
 class Footer {
 
-    private $socialNetworkLinks;
-    private $socialNetworkIcons;
+
     private $titulo_footer;
-    private $nombre_periodico
+    private $nombre_periodico;
     private $direccion;
     private $phone;
     private $phone2;
@@ -13,16 +12,6 @@ class Footer {
 
     public function Footer() {
 
-
-        //esta parte la obtenemos de una clase del css, pero deberiamos hacerlo nosotros manualmente
-        $this->socialNetworkIcons = array('images/icons/facebook.png',
-            'images/icons/twitter.png',
-            'images/icons/instagram.png',
-            'images/icons/google+.png');
-        $this->socialNetworkLinks = array('https://www.facebook.com/Hotel-Plaza-Nueva-176542882374100/?fref=ts',
-            'https://twitter.com/HOTELPLAZANUEVA',
-            'https://www.instagram.com/explore/locations/44043216/',
-            'https://plus.google.com/117874938358313917312/posts');
 
         $this->titulo_footer = 'CONTACTO';
         $this->nombre_periodico = 'El Profeta';
@@ -36,17 +25,8 @@ class Footer {
     }
 
 
-    public function getSocialNetworkIcons() {
 
-        return $this->socialNetworkIcons;
-    }
-
-    public function getSocialNetworkLinks() {
-
-        return $this->socialNetworkLinks;
-    }
-
-    public function getTitulo_footer() {
+    public function getTitulofooter() {
 
         return $this->titulo_footer;
     }
