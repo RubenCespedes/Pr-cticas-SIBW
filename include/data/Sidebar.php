@@ -1,15 +1,15 @@
 <?php
 class Sidebar {
-    private $
+    private $imagen;
 
     public function Sidebar() {
 
-        $this->
+        $this->imagen = 'images/publicidad.png';
     }
 
-    public function getPhone() {
+    public function getImagen() {
 
-        return $this->phone;
+        return $this->imagen;
     }
 
 
