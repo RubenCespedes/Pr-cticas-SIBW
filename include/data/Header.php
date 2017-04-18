@@ -8,6 +8,8 @@
             
             if(!empty($idNoticia)) {
                 $this->logoPeriodico = "./images/logo_pequeño_noticia.png";
+            } else {
+                $this->logoPeriodico = "./images/logo.png";
             }
         }
         
