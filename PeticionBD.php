@@ -69,84 +69,216 @@ echo "<body>
             <button class='boton_suscribete_noticia'>Suscribete</button>
             <button class='boton_sesion_noticia'>Sesión</button>
         </div>
-    </nav>
-		
-	<!-- SEGUNDA BARRA DE NAVEGACIÓN -->
-	<nav class='segunda_barra_navegacion_noticia'>
-		
-        <div class='contenedor_categoria_noticia'>";
+    </nav>";
+
+$idNoticia = 1;
+
+$etiquetas = array();
 
 $conn = conectarBD(); // Llamada a la función
 
-// Crear una sentencia preparada
 $sentencia = mysqli_stmt_init($conn);
 
-if (mysqli_stmt_prepare($sentencia, 'SELECT genero FROM Noticia')) {
+            if (mysqli_stmt_prepare($sentencia, 'SELECT genero, titularExtendido, autor, lugar, horaActualizacion, entradilla, cuerpo FROM Noticia WHERE idNoticia=?')) {
     
-    // Vincular los parámetro para los marcadores
-    //mysqli_stmt_bind_param($sentencia, "s", $genero);
+                // 2.2 Vinculamos los parámetro para los marcadores
+                //mysqli_stmt_bind_param($sentencia, "i", $this->idNoticia);
     
-    // Ejecutar la consulta
-    mysqli_stmt_execute($sentencia);
+                // 2.3 Ejecutamos la consulta
+                mysqli_stmt_execute($sentencia);
     
     
-    // Vincular las variables de resultados
-    mysqli_stmt_bind_result($sentencia, $genero);
+                // 2.4 Vinculamos las variables de resultados
+                mysqli_stmt_bind_result($sentencia, $genero, $titular, $autor, $lugar, $horaActualizacion, $entradilla, $cuerpo);
     
-    // Obtener el valor
-    /*while(mysqli_stmt_fetch($sentencia)){
-        echo "id: " . $id . " - Autor: " . $autor . "<br>";
-    }*/
-    
-    mysqli_stmt_fetch($sentencia);
-    
-    echo "<p>" . $genero . "</p>";
-    
-    // Cerrar la sentencia
-    mysqli_stmt_close($sentencia);
-}
+                mysqli_stmt_fetch($sentencia);
+                
+                //this->genero = $genero;
+                
+                // 2.5 Cerramos la sentencia
+                mysqli_stmt_close($sentencia); 
+            }
+            
+            // 2.6 Repetimos desde el paso 2.1
+            
+            $sentencia = mysqli_stmt_init($conn);
 
-// Cerrar la conexión
-mysqli_close($conn);
+            if (mysqli_stmt_prepare($sentencia, 'SELECT nombreEtiqueta FROM Etiqueta, NoticiaTieneEtiqueta WHERE (Etiqueta.idEtiqueta = NoticiaTieneEtiqueta.idEtiqueta AND NoticiaTieneEtiqueta.idNoticia = ?)')) {
+    
+                mysqli_stmt_bind_param($sentencia, "i", $idNoticia);
+    
+                mysqli_stmt_execute($sentencia);
+    
+    
+                mysqli_stmt_bind_result($sentencia, $nombreEtiqueta);
+    
+                while(mysqli_stmt_fetch($sentencia)){
+                    array_push($etiquetas, $nombreEtiqueta);
+                }
+    
+                mysqli_stmt_close($sentencia);
+            }
+            
+            $sentencia = mysqli_stmt_init($conn);
 
-echo "</div>
+            if (mysqli_stmt_prepare($sentencia, 'SELECT ubicacion FROM NoticiaContieneImagen, Imagen WHERE (Imagen.idImagen = NoticiaContieneImagen.idImagen AND idNoticia = ?)')) {
     
-        ";
-$id = 1;
+                mysqli_stmt_bind_param($sentencia, "i", $idNoticia);
+    
+                mysqli_stmt_execute($sentencia);
+    
+    
+                mysqli_stmt_bind_result($sentencia, $imagen);
+    
+                mysqli_stmt_fetch($sentencia);
+                
+                //$this->imagen = $imagen;
+    
+                mysqli_stmt_close($sentencia);
+            }
+            
+            $sentencia = mysqli_stmt_init($conn);
 
-$conn = conectarBD(); // Llamada a la función
+            if (mysqli_stmt_prepare($sentencia, 'SELECT descripcion FROM Imagen, NoticiaContieneImagen WHERE (Imagen.idImagen = NoticiaContieneImagen.idImagen AND idNoticia = ?)')) {
+    
+                mysqli_stmt_bind_param($sentencia, "i", $idNoticia);
+    
+                mysqli_stmt_execute($sentencia);
+    
+    
+                mysqli_stmt_bind_result($sentencia, $descripcionImagen);
+    
+                mysqli_stmt_fetch($sentencia);
+                
+                //$this->descripcionImagen = $descripcionImagen;
+    
+                mysqli_stmt_close($sentencia);
+            }
+            
+            $sentencia = mysqli_stmt_init($conn);
 
-// Crear una sentencia preparada
-$sentencia = mysqli_stmt_init($conn);
+            if (mysqli_stmt_prepare($sentencia, 'SELECT autor FROM Imagen, NoticiaContieneImagen WHERE (Imagen.idImagen = NoticiaContieneImagen.idImagen AND idNoticia = ?)')) {
+    
+                mysqli_stmt_bind_param($sentencia, "i", $idNoticia);
+    
+                mysqli_stmt_execute($sentencia);
+    
+    
+                mysqli_stmt_bind_result($sentencia, $autorImagen);
+    
+                mysqli_stmt_fetch($sentencia);
+                
+                //$this->autorImagen = $autorImagen;
+    
+                mysqli_stmt_close($sentencia);
+            }
+            
+            $sentencia = mysqli_stmt_init($conn);
 
-if (mysqli_stmt_prepare($sentencia, 'SELECT nombreEtiqueta FROM Etiqueta, NoticiaTieneEtiqueta WHERE (Etiqueta.idEtiqueta = NoticiaTieneEtiqueta.idEtiqueta AND NoticiaTieneEtiqueta.idNoticia = ?)')) {
+            if (mysqli_stmt_prepare($sentencia, 'SELECT lugar FROM Imagen, NoticiaContieneImagen WHERE (Imagen.idImagen = NoticiaContieneImagen.idImagen AND idNoticia = ?)')) {
     
-    // Vincular los parámetro para los marcadores
-    mysqli_stmt_bind_param($sentencia, "i", $id);
+                mysqli_stmt_bind_param($sentencia, "i", $idNoticia);
     
-    // Ejecutar la consulta
-    mysqli_stmt_execute($sentencia);
+                mysqli_stmt_execute($sentencia);
     
     
-    // Vincular las variables de resultados
-    mysqli_stmt_bind_result($sentencia, $nombreEtiqueta);
+                mysqli_stmt_bind_result($sentencia, $lugarImagen);
     
-    // Obtener el valor
-    while(mysqli_stmt_fetch($sentencia)){
-        echo "<a href='#'>" . $nombreEtiqueta . "</a>";
-    }
+                mysqli_stmt_fetch($sentencia);
+                
+                //$this->lugarImagen = $lugarImagen;
     
-    //mysqli_stmt_fetch($sentencia);
-    
-    //echo "<p>" . $genero . "</p>";
-    
-    // Cerrar la sentencia
-    mysqli_stmt_close($sentencia);
-}
+                mysqli_stmt_close($sentencia);
+            }
+            
+            // 3. Cerramos la conexión
+            mysqli_close($conn);
 
-// Cerrar la conexión
-mysqli_close($conn);
-
-echo "</nav>";
-
+            echo "<nav class='segunda_barra_navegacion_noticia'>
+		
+                    <div class='contenedor_categoria_noticia'>
+                        <p>" . $genero . "</p>
+                    </div>";
+            
+            $etiquetaslength = count($etiquetas);
+            
+            for($x = 0; $x < $etiquetaslength; $x++) {
+                echo "<a href='#'>" . $etiquetas[$x] . "</a>";
+            }
+            
+            echo "</nav>
+		
+                <!-- RESTO DE LA NOTICIA -->
+                <div id='cont_noticia'>
+                    <div class='bloque_noticia_completa'>
+                        <section class='bloque_titulo_noticia'>
+                            <div class='titulo_noticia'>
+                                <h1>" . $titular . "</h1>
+                            </div>
+                        </section>
+		
+                        <section class='bloque_fijo_noticia'>
+                            <div class='bloque_autor_fijo_noticia'>
+                                <span>" . $autor . "</span>
+                                <span>" . $lugar . "</span>
+                            </div>
+                            
+                            <div class='bloque_botones_fijo_noticia'>
+                                <span><i class='fa fa-facebook-square'></i></span>
+                                <span><i class='fa fa-twitter-square'></i></span>
+                                <span><i class='fa fa-google-plus-square'></i></span>
+                                <span><a href='index.php?idNoticia=" . $idNoticia . "&impreso=si><i class='fa fa-print'></i></a></span>
+                            </div>
+			
+                            <div class='hora_actualizado_fijo_noticia'>
+                                <span>Actualizado " . $horaActualizacion . " CET</span>
+                            </div>
+                        </section>
+		
+                        <section class='bloque_texto_noticia'>
+                            <div class='bloque_imagen_noticia'>
+                                <div class='imagen_noticia'>
+                                    <img src='" . $imagen . "' width='100%' alt='imagen_noticia'>
+                                </div>
+                                
+                                <div class='bloque_pie_foto_noticia'>
+                                    <span>" . $descripcionImagen . "</span>
+                                    <span class='creditos_pie_foto'>". $autorImagen . " " . $lugarImagen . "</span>
+                                </div>
+                            </div>
+			
+                            <div class='texto_noticia'>
+                                <article class='entradilla_noticia'>
+                                    <p>" . $entradilla . "</p>
+                                </article>
+                            </div>
+			
+                            <div>
+                                <article class='cuerpo_noticia'>
+                                    <p>" . $cuerpo . "
+                                </article>
+                            </div>
+                        </section>  
+        
+                        <!-- FORMULARIO CON EL COMENTARIO NUEVO -->
+                        <div id='formulario_comentarios'>
+        
+                            <!-- Contenedor con los datos del formulario -->
+                            <div>
+                                <div id='datos_comentario'>
+                                    Nombre:<br>
+                                    <input id='name' type='text' name='name' required><br>
+                                    E-mail:<br>
+                                    <input type='email' name='email' required><br>
+                                </div>
+                                
+                                <div id='boton_comentario'>
+                                    <button onclick='aniadir_comentario()'>Enviar</button>
+                                </div>
+                                
+                                <textarea id='fname' onkeyup='myFunction()' name='message' rows='10' cols='70' required>Introduzca aquí su comentario...</textarea>               
+                            </div>         
+                        </div>
+                    </div>
+                </div>";
 ?>
