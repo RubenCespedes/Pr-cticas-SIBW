@@ -19,7 +19,7 @@ class Header {
 
         global $sec;
 
-        $extraInput;
+
 
 
         if(!empty($sec)) {

@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: carlos
- * Date: 17/04/2017
- * Time: 19:06
- */
+
 
 <?php
 	include 'include/data/Footer.php';

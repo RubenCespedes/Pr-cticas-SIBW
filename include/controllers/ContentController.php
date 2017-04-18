@@ -1,10 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: carlos
- * Date: 17/04/2017
- * Time: 19:13
- */
 
 <?php
 	class ContentController {

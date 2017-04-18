@@ -559,19 +559,23 @@ a {
 /* CSS CON LA NOTICIA IMPRESA */
 #contenedor_logo_impresa {
     width: 20%;
-    margin: auto;
+    float:left;
+
     padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 100%;
 }
 
 .titulo_noticia_impresa {
     font-size: 2.5em;
+    padding-top: 10%;
     margin:auto;
     width: 70%;
     text-align: center;
 }
 
 .entradilla_noticia_impresa {
-    width: 50%;
+    width: 100%;
     float: left;
     font-size: 3em;
 }
@@ -583,8 +587,9 @@ a {
 }
 
 .foto_noticia_impresa {
-    width: 50%;
+    width: 100%;
     float: right;
+    padding-top: 3%;
     position: relative;
 }
 
@@ -594,7 +599,6 @@ a {
 }
 
 .pie_noticia_impresa {
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -608,7 +612,20 @@ a {
 .cuerpo_noticia_impresa {
     font-family: sans-serif;
     font-size: 1.3em;
+    float:left;
+    width:49%;
+    text-align: justify;
 }
+
+.cuerpo_noticia_impresa2 {
+    font-family: sans-serif;
+    font-size: 1.3em;
+    float:left;
+    width:49%;
+    margin-left:2%;
+    text-align: justify;
+}
+
 
 .seccion_impresa {
     font-size: 1.2em;
