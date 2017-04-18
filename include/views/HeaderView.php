@@ -13,14 +13,11 @@
                 echo "<nav class='primera_barra_navegacion_noticia'>
                     <div class='bloque_enlaces_primer_nav_noticia'>
                         <img class='logo_noticia' src='" . $this->header->getLogoPeriodico() . "' alt='logo'>
-                        <a href='index.php?sec=españa'>España</a> |
+                        <a href='index.php?sec=nacional'>Nacional</a> |
                         <a href='index.php?sec=internacional'>Internacional</a> |
                         <a href='index.php?sec=politica'>Política</a> |
-                        <a href='index.php?sec=economia'>Economía</a> |
-                        <a href='index.php?sec=tecnologia'>Tecnología</a> |
-                        <a href='index.php?sec=sociedad'>Sociedad</a> |
-                        <a href='index.php?sec=cultura'>Cultura</a> |
-                        <a href='index.php?sec=tv'>Tv</a>
+                        <a href='index.php?sec=tecnologia'>Tecnologia</a> |
+                        <a href='index.php?sec=deportes'>Deportes</a> |
                     </div>
 		
                     <div class='bloque_botones_primer_nav_noticia'>
@@ -36,7 +33,7 @@
                     </div>
 	
                     <div class='cont_logo_header'>
-                        <img id='logo' src='" . $this->header->getLogoPeriodico() . "' alt="LOGO">
+                        <img id='logo' src='" . $this->header->getLogoPeriodico() . "' alt='LOGO'>
                     </div>
     
                     <div class='cont_botones_header'>
