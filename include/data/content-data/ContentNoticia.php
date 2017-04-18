@@ -3,7 +3,6 @@
     class ContentNoticia {
         // Variable conforme a la base de datos
         private $idNoticia;
-        private $bd;
         private $genero;
         private $etiquetas;
         private $titulo;
@@ -24,8 +23,8 @@
             $this->etiquetas = array();
             
             // 1. Conectamos con la base de datos
-            $bd = new bd();
-            $conn = $this->bd->conectarBD();
+            require './includes/conexionBD.php';
+            $conn = conectarBD();
                   
             // 2. Realizamos todas las consultas necesarias
             // 2.1 Creamos una sentencia preparada
