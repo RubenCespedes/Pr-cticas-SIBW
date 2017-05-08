@@ -23,7 +23,7 @@
             $this->etiquetas = array();
             
             // 1. Conectamos con la base de datos
-            require './includes/conexionBD.php';
+            include './include/conexionBD.php';
             $conn = conectarBD();
                   
             // 2. Realizamos todas las consultas necesarias
@@ -44,7 +44,7 @@
     
                 mysqli_stmt_fetch($sentencia);
                 
-                this->genero = $genero;
+                $this->genero = $genero;
                 
                 // 2.5 Cerramos la sentencia
                 mysqli_stmt_close($sentencia);
@@ -252,7 +252,7 @@
             }
             
             // 3. Cerramos la conexión
-            mysqli_stmt_close($sentencia);
+            mysqli_close($conn);
         }
         
         public function getGenero() {
@@ -284,11 +284,11 @@
         }
         
         public function getImagen() {
-            return this->imagen;
+            return $this->imagen;
         }
         
         public function getDescripcionImagen() {
-            return this->descripcionImagen;
+            return $this->descripcionImagen;
         }
         
         public function getAutorImagen() {
@@ -301,6 +301,10 @@
         
         public function getEntradilla() {
             return $this->entradilla;
+        }
+        
+        public function getCuerpo(){
+            return $this->cuerpo;
         }
     }
     

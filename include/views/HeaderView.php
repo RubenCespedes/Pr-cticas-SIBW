@@ -36,7 +36,7 @@
                     </div>
 	
                     <div class='cont_logo_header'>
-                        <img id='logo' src='" . $this->header->getLogoPeriodico() . "' alt="LOGO">
+                        <img id='logo' src='" . $this->header->getLogoPeriodico() . "' alt='LOGO'>
                     </div>
     
                     <div class='cont_botones_header'>

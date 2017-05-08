@@ -1,4 +1,33 @@
 <?php
+
+    echo "<!DOCTYPE html>
+        <html>";
+
+    include 'include/controllers/MetadataController.php';
+    include 'include/controllers/HeaderController.php';
+        
+    if(empty($_GET["sec"])){
+        $sec = "";
+    } else {
+        $sec = $_GET["sec"];
+    }
+
+    if(empty($_GET["idNoticia"])){
+        $idNoticia = "";
+    } else {
+        $idNoticia = $_GET["idNoticia"];
+    }
+
+    // Generamos los metadatos
+    $metaDataController = new MetadataController();
+    $metaDataController->start();
+
+    // Generamos el header
+    $headerController = new HeaderController();
+    $headerController->start();
+
+    echo "</body></html>";
+/*
     include 'include/controllers/HeaderController.php';
     include 'include/controllers/ContentController.php';
     include 'include/controllers/SidebarController.php';
@@ -6,16 +35,46 @@
 
     echo "<!DOCTYPE html>
     <html>";
+
+    if(empty($_GET["sec"])) {
+        $sec = "";
+    }else {
+        $sec = $_GET["sec"];
+    }
+
+    if(empty($_GET["idNoticia"])) {
+        $idNoticia = "";
+    } else {
+        $idNoticia = $_GET["idNoticia"];
+    }
     
-    // Variable global para la sección
-    $sec = $_GET["sec"];
+    echo "<head>
+    <!-- CODIFICACIÓN USADA -->
+    <meta charset='UTF-8'>
+    <!-- TITULO -->
+    <title>EL PLANETA</title>
+    <!-- ETIQUETA PARA EL CONTROL DEL TAMAÑO DE LA PÁGINA WEB -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- PALABRAS CLAVE PARA EL BUSCADOR -->
+    <meta name='keywords' content='HTML, CSS, XML, XHTML, JavaScript'>
+    <!-- DESCRIPCION DE NUESTRA PAGINA WEB -->
+    <meta name='description' content='Free Portal Web with news'>
+    <!-- AUTOR DE LA PAGINA -->
+    <meta name='author' content='RUBEN CESPEDES & CARLOS ENTRENA'>
+    <!-- ETIQUETA PARA REFRESCAR EL DOCUMENTO CADA X SEGUNDOS -->
+    <!--<meta http-equiv='refresh' content='30'>-->
     
-    // Variable global para el identificador de la noticia
-    $idNoticia = $_GET["idNoticia"];
+    <!-- ENLACE PARA EL CSS DONDE TENEMOS DEFINIDO EL ESTILO -->
+    <link rel='stylesheet' type='text/css' href='./CSS/index.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     
+    <script src='./JavaScript/funciones.js'></script>
+</head>";
+
+
     // Incluir los meta datos
-    $metadataController = new MetadataController();
-    $metadataController->start();
+    //$metadataController = new MetadataController();
+    //$metadataController->start();
     
     if(!empty($sec)) {
         echo "<body onload='actualizarHora()'>";
@@ -41,5 +100,5 @@
     
     echo "</body>
 		</html>";
-
+*/
 ?>

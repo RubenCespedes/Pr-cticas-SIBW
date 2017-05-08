@@ -6,7 +6,7 @@
         public function Header() {
             global $idNoticia;
             
-            if(!empty($idNoticia)) {
+            if(empty($idNoticia)){
                 $this->logoPeriodico = "./images/logo_pequeño_noticia.png";
             } else {
                 $this->logoPeriodico = "./images/logo.png";
